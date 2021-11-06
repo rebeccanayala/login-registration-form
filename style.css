@@ -1,0 +1,19 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #AEEBF0;
+    padding: 2rem;
+}
+
+.box {
+    max-width: 1020px;
+    height: 640px;
+    background-color: white;
+}
