@@ -164,6 +164,11 @@ label {
     color: #9B9AD6;
 }
 
+.text {
+    color: #bbb;
+    font-size: 0.7rem;
+} 
+
 .text a {
     color: #151111;
     font-size: 0.7rem;
