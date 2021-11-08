@@ -22,11 +22,18 @@ toggle_btn.forEach(btn => {
 
 function moveSlider() {
     let index = this.dataset.value;
-    console.log(index);
-    bullets.forEach(bull => bull.classList.remove("active"));
+  
+    let currentImage = document.querySelector(`.img-${index}`);
+    images.forEach((img) => img.classList.remove("show"));
+    currentImage.classList.add("show");
+  
+    const textSlider = document.querySelector(".text-group");
+    textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
+  
+    bullets.forEach((bull) => bull.classList.remove("active"));
     this.classList.add("active");
-}
-
-bullets.forEach(bullet => {
+  }
+  
+  bullets.forEach((bullet) => {
     bullet.addEventListener("click", moveSlider);
-})
+  });
