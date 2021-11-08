@@ -52,17 +52,6 @@ main {
     transition: .8s ease-in-out;
 }
 
-.carousel {
-    position: absolute;
-    height: 100%;
-    width: 55%;
-    left: 45%;
-    top: 0;
-    background-color: #9B9AD6;
-    border-radius: 2rem;
-    transition: .8s ease-in-out;
-}
-
 form {
     max-width: 260px;
     width: 100%;
@@ -192,3 +181,90 @@ main.sign-up-mode .forms-wrap {
 main.sign-up-mode .carousel {
     left: 0%;
 }
+
+.carousel {
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    left: 45%;
+    top: 0;
+    background-color: #9B9AD6;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding-bottom: 2rem;
+    transition: .8s ease-in-out;
+}
+
+.images-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.images-wrapper img {
+    padding-top: 2px;
+    margin: auto;
+    width: 470px;
+}
+
+.image {
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    opacity: 0;
+}
+
+.image.show {
+    opacity: 1;
+}
+
+.text-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-wrap {
+    max-height: 2.2rem;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(0);
+}
+
+.text-group h2 {
+    line-height: 2.2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.bullets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bullets span {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: black;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.bullets span.active {
+    width: 1.1rem;
+    background-color: #8C52FF;
+    border-radius: 1rem;
+}
+
